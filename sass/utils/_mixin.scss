@@ -22,5 +22,5 @@
 }
 
 @mixin grid ($count-of-element, $size-of-gap) {
-    flex-basis: calc(100% - ($count-of-element - 1) * $size-of-gap) / $count-of-element;
+    flex-basis: calc((100% - $size-of-gap * ($count-of-element - 1)) / $count-of-element);
 }

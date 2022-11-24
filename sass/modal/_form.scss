@@ -1,3 +1,70 @@
+.modal__title {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+
+    margin-top: 2px;
+    margin-bottom: 12px;
+}
+
+.modal-form {
+    position: relative;
+}
+
+.label {
+    display: block;
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    
+    color: $secondary-font-color;
+}
+
+.modal-form__group {
+    position: relative;
+
+    margin-bottom: 10px;
+
+}
+
+.modal-form__field {
+    width: 448px;
+    height: 40px;
+
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+
+    &:hover,
+    &:focus {
+        outline: 1px solid $accent;
+        border-radius: 4px;
+    }
+}
+
+.modal-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    width: 18px;
+    height: 18px;
+
+    .modal-form__field:focus+&,
+    .modal-form__field:hover+& {
+        fill: $accent;
+    }
+}
+
 .comment-form__message {
     display: block;
     resize: none;
@@ -5,8 +72,7 @@
     width: 448px;
     height: 120px;
 
-    padding-top: 12px;
-    padding-left: 16px;
+    padding: 12px 16px;
 
     margin-bottom: 20px;
 
@@ -22,54 +88,18 @@
 
     transition: border-color 300ms;
 
+        &[placeholder] {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: calc(16 / 14);
+            letter-spacing: 0.01em;
+
+            color: rgba(117, 117, 117, 0.5);
+        }
+
         &:hover,
         &:focus,
         &:not(:placeholder-shown) {
             border-color: $accent;
         }
-}
-
-.agreement-form__label {
-    @include flex();
-    gap: 7px;
-
-    margin-bottom: 30px;
-}
-
-.agreement-form__checkbox {
-    appearance: none;
-
-    width: 16px;
-    height: 15px;
-
-    border: 2px solid $main-font-color;
-    border-radius: 2px;
-
-    background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 0;
-
-    cursor: pointer;
-
-    transition: background-color 300ms, border-color 300ms, background-size 300ms;
-
-        &:checked {
-            background-color: $accent;
-            border-color: transparent;
-            background-size: 16px 15px;
-        }
-}
-
-.agreement-form__text {
-    font-size: 14px;
-    line-height: 1.71;
-
-    color: $secondary-font-color;
-
-    user-select: none;
-}
-
-.agreement-form__link {
-    color: $accent;
 }

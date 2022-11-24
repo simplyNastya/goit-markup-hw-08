@@ -16,13 +16,11 @@
     }
 
     @media screen and (min-width: 768px) {
-        width: 354px;
-        height: 404px;
+        @include grid (2, 30px)
     }
  
     @media screen and (min-width: 1200px) {
-        width: 370px;
-        height: 404px;
+        @include grid (3, 30px)
     }
 
 }
@@ -47,12 +45,12 @@
     overflow: hidden;
 }
 
-.examples__img {
-    @media screen and (min-width: 1200px) {
-        width: 370px;
-        height: 294px;
-    }
-}
+// .examples__img {
+//     @media screen and (min-width: 1200px) {
+//         width: 370px;
+//         height: 294px;
+//     }
+// }
 
 .examples__overlay-text {
     position: absolute;
