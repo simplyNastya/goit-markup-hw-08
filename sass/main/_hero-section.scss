@@ -1,0 +1,83 @@
+.hero-section {
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    text-align: center;
+
+    background-color: $hero-gradient-color;
+
+    @media screen and (min-width: 480px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+        url('/images/hero/hero-img-480-@1x.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero-section {
+                background-image: url('/images/hero/hero-img-960@2x.jpg');
+            }
+        }
+
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+        url('/images/hero/hero-img-768@1x.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero-section {
+                background-image: url('/images/hero/hero-img-1536@2x.jpg');
+            }
+        }
+
+    @media screen and (min-width: 1200px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+        url('/images/hero/hero-img-1600@1x.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero-section {
+                background-image: url('/images/hero/hero-img-3200@2x.jpg');
+            }
+        }
+    }
+
+.hero-section__container {
+    @include container($width: 480px);
+
+    @media screen and (min-width: 768px) {
+        @include container($width: 768px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include container($width: 1200px);
+    }
+}
+
+.hero-section__title {
+    width: 360px;
+
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: calc(42 / 26);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $white-color;
+}

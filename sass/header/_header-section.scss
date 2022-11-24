@@ -1,0 +1,32 @@
+.header-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #ECECEC;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+}
+
+.header-section__container {
+    @include container($width: 480px);
+    
+    @include flex($horizontal: space-between);
+    
+    @media screen and (min-width: 768px) {
+        @include container($width: 768px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include container($width: 1200px);
+
+        @include flex($horizontal: null);
+    }
+}

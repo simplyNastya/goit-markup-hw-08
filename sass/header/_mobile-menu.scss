@@ -1,0 +1,150 @@
+.menu-toggle {
+    margin-left: auto;
+
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+            display: none;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: 48px;
+    padding-right: 40px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+
+    background-color: $white-color;
+    z-index: 999;
+
+    transform: translateX(100%);
+
+    @include transition (transform);
+
+    &.is-open {
+        transform: translateX(0);
+    }
+}
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.mobile-menu__list {
+    @extend %list;
+}
+
+.mobile-menu__item {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.mobile-menu__link {
+    @extend %link;
+
+    display: block;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc(47 / 40);
+    letter-spacing: 0.02em;
+    color: $main-font-color;
+
+    &:hover,
+    &:focus {
+        color: $accent;
+    }
+}
+
+    .menu-toggle__icon-close:hover,
+    .menu-toggle__icon-close:focus {
+        color: $accent;
+    } 
+
+.mobile-menu__contacts-list {
+    @extend %list;
+
+    margin-top: auto;
+    margin-bottom: 64px;
+
+    font-weight: 500;
+}
+
+.mobile-menu__contacts-tel-item {
+    margin-bottom: 32px;
+}
+
+.mobile-menu__tel-link {
+    @extend %link;
+
+    font-size: 34px;
+    line-height: calc(40 / 34);
+    letter-spacing: 0.02em;
+    color: $accent;
+}
+
+.mobile-menu__email-link {
+    @extend %link;
+
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.02em;
+    color: $secondary-font-color;
+}
+
+.mobile-menu__socials {
+    @extend %list;
+
+    @include flex($horizontal: null);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mobile-menu__socials-item {
+
+    &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+}
+
+.mobile-menu__socials-link {
+    @extend %link;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+    color: $accent;
+    
+}

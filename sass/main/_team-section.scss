@@ -1,0 +1,124 @@
+.team-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $icon-color-and-team-bcg;
+
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.team-section__container {
+    @include container(480px);
+
+    @media screen and (min-width: 768px) {
+        @include container(768px);
+    }
+
+    @media screen and(min-width: 1200px) {
+        @include container(1200px);
+    }
+}
+
+.team-section__title {
+    @extend %title;
+
+    margin-bottom: 30px;
+}
+
+.team-card {
+    @extend %list;
+
+    @include flex();
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-card__item {
+    text-align: center;
+    
+    background-color: $white-color;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+                margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
+}
+
+.team-card__wrapper {
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+    &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+}
+
+// .team-card__img {
+// }
+
+.team-card__title {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+}
+
+.team-card__position {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    color: $secondary-font-color;
+}
+
+.team-card__socials-list {
+    @extend %list;
+
+    @include flex();
+    gap: 10px;
+}
+
+.team-card__socials-item {
+    @include flex();
+
+}
+
+.team-card__socials-link {
+    @include flex();
+
+    width: 44px;
+    height: 44px;
+
+    &:hover,
+    &:focus {
+        background-color: $accent;
+        border-radius: 50%;
+    }
+    
+}
+
+.team-card__socials-icon {
+    fill: $icon-color-and-team-bcg;
+
+    .team-card__socials-link:hover & {
+        fill: $white-color;
+    }
+}

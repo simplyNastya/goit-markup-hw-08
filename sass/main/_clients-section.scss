@@ -1,0 +1,81 @@
+.clients-section {
+    padding-top: 60px;
+    padding-bottom: 37px;
+
+    background-color: $white-color;
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }    
+}
+
+.clients-section__container {
+    @include container(480px);
+
+    @media screen and (min-width: 768px) {
+        @include container(768px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include container(1200px);
+    }   
+}
+
+.clients-section__title {
+    @extend %title;
+
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+}
+
+.clients-section__list {
+    @extend %list;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.clients-section__item {
+    @include flex();
+}
+
+.clients-section__link {
+    @include flex();
+
+    width: 210px;
+    height: 92px;
+
+    border: 1px solid $icon-color-and-team-bcg;
+    border-radius: 4px;
+
+    &:hover, 
+    &:focus {
+        border: 1px solid $accent;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+    }
+
+}
+
+.clients-section__icon {
+    fill: $icon-color-and-team-bcg;
+
+    .clients-section__link:hover & {
+        fill: $accent;
+    }
+}
