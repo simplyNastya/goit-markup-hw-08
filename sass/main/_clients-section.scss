@@ -39,7 +39,7 @@
 .clients-section__list {
     @extend %list;
 
-    display: flex;
+    @include flex ();
     flex-wrap: wrap;
     gap: 30px;
 }
