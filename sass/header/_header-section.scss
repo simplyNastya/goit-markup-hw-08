@@ -16,16 +16,16 @@
 }
 
 .header-section__container {
-    @include container($width: 480px);
+    @include container(480px);
     
     @include flex($horizontal: space-between);
     
     @media screen and (min-width: 768px) {
-        @include container($width: 768px);
+        @include container(768px);
     }
 
     @media screen and (min-width: 1200px) {
-        @include container($width: 1200px);
+        @include container(1200px);
 
         @include flex($horizontal: null);
     }

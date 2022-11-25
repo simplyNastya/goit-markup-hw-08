@@ -46,13 +46,20 @@
 
 .clients-section__item {
     @include flex();
+
+    @media screen and (min-width: 768px) {
+        @include grid (3, 30px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include grid (6, 30px);
+    }
 }
 
 .clients-section__link {
     @include flex();
 
-    width: 210px;
-    height: 92px;
+    padding: 15px 51px;
 
     border: 1px solid $icon-color-and-team-bcg;
     border-radius: 4px;
@@ -63,11 +70,11 @@
     }
 
     @media screen and (min-width: 768px) {
-        width: 226px;
+        padding: 15px 59px;
     }
 
     @media screen and (min-width: 1200px) {
-        width: 170px;
+        padding: 15px 31px;
     }
 
 }

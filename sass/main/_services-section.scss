@@ -24,6 +24,8 @@
 
 .services-setion__item {
     position: relative;
+
+    @include grid(3, 30px);
 }
 
 .services-setion__overlay-wrapper {

@@ -66,8 +66,8 @@
     padding-bottom: 24px;
 
     &:not(:last-child) {
-            margin-bottom: 30px;
-        }
+        margin-bottom: 30px;
+    }
 }
 
 // .team-card__img {
@@ -98,7 +98,6 @@
 
 .team-card__socials-item {
     @include flex();
-
 }
 
 .team-card__socials-link {
