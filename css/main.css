@@ -1239,13 +1239,27 @@ button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 100%;
+  height: 609px;
+  margin-top: 10%;
   padding: 40px;
   background-color: #FFFFFF;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+    margin-top: 20%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__close-button {
@@ -1313,8 +1327,8 @@ button {
 }
 
 .modal-form__field {
-  width: 448px;
   height: 40px;
+  width: 100%;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1342,7 +1356,7 @@ button {
 .comment-form__message {
   display: block;
   resize: none;
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   margin-bottom: 20px;
