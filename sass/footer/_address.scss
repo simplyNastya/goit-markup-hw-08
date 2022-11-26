@@ -30,6 +30,8 @@
 
     color: $secondary-font-color;
 
+    @include transition(color);
+
     &:hover,
     &:focus {
         color: $white-color;

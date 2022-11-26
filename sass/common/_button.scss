@@ -23,6 +23,8 @@
 
     cursor: pointer;
 
+    @include transition (background-color);
+
     &:hover,
     &:focus {
         background-color: $btn-active;

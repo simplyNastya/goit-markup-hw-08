@@ -80,6 +80,8 @@
     letter-spacing: 0.02em;
     color: $main-font-color;
 
+    @include transition(color);
+
     &:hover,
     &:focus {
         color: $accent;

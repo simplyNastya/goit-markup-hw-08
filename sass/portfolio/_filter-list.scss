@@ -16,10 +16,6 @@
     }
 }
 
-// .portfolio-section__filter-item {
-
-// }
-
 .portfolio-section__filter-button {
     padding-top: 6px;
     padding-bottom: 6px; 
@@ -39,6 +35,10 @@
     border-radius: 4px;
 
     cursor: pointer;
+
+    @include transition(color);
+    @include transition(background-color);
+    @include transition(box-shadow);
     
     &:hover,
     &:focus {

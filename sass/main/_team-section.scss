@@ -2,7 +2,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    background-color: $icon-color-and-team-bcg;
+    background-color: $features-and-services-icon-bcg;
 
     @media screen and (min-width:1200px) {
         padding-top: 94px;
@@ -70,9 +70,6 @@
     }
 }
 
-// .team-card__img {
-// }
-
 .team-card__title {
     margin-bottom: 10px;
 
@@ -105,6 +102,8 @@
 
     width: 44px;
     height: 44px;
+
+    @include transition(background-color);
 
     &:hover,
     &:focus {
