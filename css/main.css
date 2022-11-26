@@ -1175,7 +1175,6 @@ button {
 }
 
 .subscribe-form__input {
-  min-width: 350px;
   height: 50px;
   margin-top: 20px;
   margin-right: auto;
@@ -1194,6 +1193,16 @@ button {
   font-size: 16px;
   line-height: 1.25;
   color: #FFFFFF;
+}
+@media screen and (max-width: 480px) {
+  .subscribe-form__input {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subscribe-form__input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe-form__input {
