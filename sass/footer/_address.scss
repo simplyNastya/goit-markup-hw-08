@@ -1,5 +1,11 @@
 .footer-section__address-wrapper{
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+
     @media screen and (min-width: 1200px) {
+        min-width: 231px;
+
         margin-right: 70px;
     }
 }
@@ -10,14 +16,23 @@
 
 .footer-section__address-list {
     @extend %list;
-
-    margin-bottom: 60px;
 }
 
 .footer-section__address-item {
     &:not(:last-child) {
         margin-bottom: 8px;
     }
+}
+
+.footer-section__street-link {
+    @extend %link;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+
+    color: $white-color;
 }
 
 .footer-section__address-link {
@@ -28,12 +43,12 @@
     font-size: 14px;
     line-height: calc(24 / 14);
 
-    color: $secondary-font-color;
+    color: rgba(255, 255, 255, 0.6);
 
     @include transition(color);
 
     &:hover,
     &:focus {
-        color: $white-color;
+        color: $accent;
     }
 }

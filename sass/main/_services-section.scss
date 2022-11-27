@@ -4,6 +4,8 @@
     }
 
     padding-bottom: 94px;
+
+    text-align: center;
 }
 
 .services-section__container {
@@ -11,8 +13,10 @@
 }
 
 .services-setion__title {
-    @extend %title;
     margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: calc(42 / 36);
 }
 
 .services-setion__list {

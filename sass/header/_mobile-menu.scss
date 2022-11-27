@@ -82,6 +82,10 @@
 
     @include transition(color);
 
+    &--current {
+        color: $accent;
+    }
+
     &:hover,
     &:focus {
         color: $accent;
@@ -109,10 +113,15 @@
 .mobile-menu__tel-link {
     @extend %link;
 
-    font-size: 34px;
-    line-height: calc(40 / 34);
+    font-size: 24px;
+    line-height: calc(28 / 24);
     letter-spacing: 0.02em;
     color: $accent;
+
+    @media screen and (min-width: 480px) {
+        font-size: 34px;
+        line-height: calc(40 / 34);
+    }
 }
 
 .mobile-menu__email-link {
@@ -129,15 +138,25 @@
 
     @include flex($horizontal: null);
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 60px;
+    
+    @media screen and (min-width: 480px) {
+        gap: 10px;
+    }
 }
 
 .mobile-menu__socials-item {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
 
-    &:not(:last-child) {
-        padding-right: 10px;
-        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    @media screen and (min-width: 480px) {
+        &:not(:last-child) {
+            padding-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
     }
+
+    
 }
 
 .mobile-menu__socials-link {

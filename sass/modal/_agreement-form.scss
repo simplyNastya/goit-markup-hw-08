@@ -31,12 +31,17 @@
 }
 
 .agreement-form__text {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: calc(14 / 12);
 
     color: $secondary-font-color;
 
     user-select: none;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: calc(24 / 14);
+    }
 }
 
 .agreement-form__link {
