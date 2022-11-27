@@ -328,6 +328,7 @@ button {
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
+  font-size: 14px;
   line-height: 1.1428571429;
   letter-spacing: 0.02em;
   color: #212121;
@@ -966,7 +967,12 @@ button {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
+  gap: 12px;
+}
+@media screen and (min-width: 480px) {
+  .clients-section__list {
+    gap: 30px;
+  }
 }
 
 .clients-section__item {
@@ -1077,9 +1083,6 @@ button {
   }
 }
 
-.footer-section__common-wrapper {
-  margin-bottom: 60px;
-}
 @media screen and (min-width: 768px) {
   .footer-section__common-wrapper {
     display: -webkit-box;
@@ -1087,6 +1090,11 @@ button {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer-section__common-wrapper {
+    margin-bottom: 60px;
   }
 }
 
