@@ -450,6 +450,91 @@ button {
   }
 }
 
+.scroll-wrapper__btn {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .scroll-wrapper__btn {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 90;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #2196F3;
+    -webkit-animation: movebtn 3s ease-in-out infinite;
+            animation: movebtn 3s ease-in-out infinite;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    cursor: pointer;
+  }
+  .scroll-wrapper__btn:hover {
+    -webkit-animation: none;
+            animation: none;
+    outline: 10px solid rgba(33, 150, 243, 0.3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scroll-wrapper__btn {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+
+.scroll-wrapper__icon {
+  width: 25px;
+  height: 25px;
+  fill: #FFFFFF;
+}
+
+@-webkit-keyframes movebtn {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  75% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes movebtn {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  75% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
 .hero-section {
   max-width: 1600px;
   margin: 0 auto;
